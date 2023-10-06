@@ -7,7 +7,7 @@
 </head>
 <body>
 <%
-String [] tagTypes =  new String [] {"for", "if", "case", "import"};
+String [] tagTypes =  new String [] {"for", "if", "case", "import", "tag"};
 
 request.setAttribute("urls", tagTypes);
 
@@ -17,7 +17,7 @@ request.setAttribute("urls", tagTypes);
 <ur>
     <c:forEach var="url"  items="${urls}" >
         <li>
-            <a href="<c:url value='${url}'/>"> ${url} </a>
+            <a href="<c:url value='${url}.jsp'/>"> ${url} </a>
         </li>
 
     </c:forEach>
